@@ -1,9 +1,12 @@
 class InitMethod:
-    def __init__(self):
-        print("In init method")
+    def __init__(self,cpu,ram):
+        self.cpu=cpu
+        self.ram=ram
 
-    def m1():
-        print("M1 method is going to execute")
+    def m1(self):
+        print("config of computer is",self.cpu,self.ram)
 
-tes = InitMethod()
-tes.m1()
+tes1 = InitMethod('i3',8)
+tes2= InitMethod('i5',16)
+tes1.m1()
+tes2.m1()
